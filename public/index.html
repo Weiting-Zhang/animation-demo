@@ -25,10 +25,40 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+    <style>
+      :root {
+          --animation-time: 0.3s; /* 定义 CSS 变量 */
+      }
+      .title {
+          font-size: 18px;
+          line-height: 22px;
+          transition: font-size var(--animation-time);
+      }
+      .title.large {
+          font-size: 24px;
+          line-height: 28px;
+          transition: font-size var(--animation-time);
+      }
+  </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    
+    <div id="root">
+      <h2 class="title">title</h2>
+    <button onclick="clickHandler()">Click</button>
+
+    <script type="text/javascript">
+        function clickHandler() {
+            const title = document.querySelector('.title');
+            if (title.classList.contains("large")) {
+                title.classList.remove("large");
+            } else {
+                title.classList.add("large");
+            }
+        }
+    </script>
+    </div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
