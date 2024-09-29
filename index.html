@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site"
-    />
-    <!--
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site" />
+  <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
@@ -18,42 +16,84 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>Demo</title>
-    <style>
-      :root {
-          --animation-time: 0.3s; /* 定义 CSS 变量 */
-      }
-      .title {
-          font-size: 18px;
-          line-height: 22px;
-          transition: font-size var(--animation-time);
-      }
-      .title.large {
-          font-size: 24px;
-          line-height: 28px;
-          transition: font-size var(--animation-time);
-      }
+  <title>Demo</title>
+  <style>
+    html,
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    img,
+    ol,
+    ul,
+    li,
+    form,
+    table,
+    tr,
+    th,
+    td,
+    blockquote {
+      border: 0;
+      border-collapse: collapse;
+      border-spacing: 0;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --animation-time: .2s;
+      --AC_ThemeFore1: #1358A9;
+      --AC_ThemeFore2: #0B3565;
+      --AC_ThemeBack1: #F6F9FC;
+      --AC_ThemeBack2: #EDF2F9;
+      --AC_ThemeBack3: #E2EBF4;
+    }
+
+    h2 {
+      padding-bottom: 0;
+    }
+
+    .title {
+      flex: 1;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 28px;
+      color: var(--AC_ThemeFore2);
+      transition: font-size var(--animation-time);
+    }
+
+    .title.small {
+      line-height: 22px;
+      font-size: 18px;
+      transition: font-size var(--animation-time);
+    }
   </style>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    
-    <div id="root">
-      <h2 class="title">title</h2>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+
+  <div id="root">
+    <h2 class="title small">title</h2>
     <button onclick="clickHandler()">Click</button>
 
     <script type="text/javascript">
-        function clickHandler() {
-            const title = document.querySelector('.title');
-            if (title.classList.contains("large")) {
-                title.classList.remove("large");
-            } else {
-                title.classList.add("large");
-            }
+      function clickHandler() {
+        const title = document.querySelector('.title');
+        if (title.classList.contains("small")) {
+          title.classList.remove("small");
+        } else {
+          title.classList.add("small");
         }
+      }
     </script>
-    </div>
-    <!--
+  </div>
+  <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
 
@@ -63,5 +103,6 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  </body>
+</body>
+
 </html>
