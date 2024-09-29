@@ -18,19 +18,52 @@
     -->
   <title>Demo</title>
   <style>
+    html,
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    img,
+    ol,
+    ul,
+    li,
+    form,
+    table,
+    tr,
+    th,
+    td,
+    blockquote {
+      border: 0;
+      border-collapse: collapse;
+      border-spacing: 0;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
     :root {
       --animation-time: 0.3s;
       --AC_ThemeFore1: #1358A9;
-      --AC_ThemeFore2: #f00;
+      --AC_ThemeFore2: #0f0;
       --AC_ThemeBack1: #F6F9FC;
       --AC_ThemeBack2: #EDF2F9;
       --AC_ThemeBack3: #E2EBF4;
-      /* 定义 CSS 变量 */
+    }
+
+    h2 {
+      padding-bottom: 0;
     }
 
     .title {
+      /* flex: 1;
+      font-weight: 700; */
       font-size: 24px;
       line-height: 28px;
+      color: var(--AC_ThemeFore2);
       transition: font-size var(--animation-time);
     }
 
