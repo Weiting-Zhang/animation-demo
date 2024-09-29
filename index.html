@@ -70,7 +70,7 @@
     :root {
       --animation-time: 0.3s;
       --AC_ThemeFore1: #1358A9;
-      --AC_ThemeFore2: rgb(28, 40, 177);
+      --AC_ThemeFore2: rgb(28, 177, 73);
       --AC_ThemeBack1: #F6F9FC;
       --AC_ThemeBack2: #EDF2F9;
       --AC_ThemeBack3: #E2EBF4;
@@ -93,13 +93,13 @@
       font-size: 24px;
       line-height: 28px;
       color: var(--AC_ThemeFore2);
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, line-height 0.3s ease;
       transform-origin: left; /* 将缩放原点设置为左侧 */
     }
 
     .title.small {
-      /* line-height: 22px;
-      font-size: 18px; */
+      line-height: 22px;
+      /* font-size: 18px; */
       transform: scale(0.75);
       /* transition: all var(--animation-time); */
     }
