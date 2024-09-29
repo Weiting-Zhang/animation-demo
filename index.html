@@ -48,7 +48,7 @@
     :root {
       --animation-time: .2s;
       --AC_ThemeFore1: #1358A9;
-      --AC_ThemeFore2: #f00;
+      --AC_ThemeFore2: #0f0;
       --AC_ThemeBack1: #F6F9FC;
       --AC_ThemeBack2: #EDF2F9;
       --AC_ThemeBack3: #E2EBF4;
@@ -65,6 +65,8 @@
       line-height: 28px;
       color: var(--AC_ThemeFore2);
       transition: font-size var(--animation-time);
+      -webkit-font-smoothing: antialiased; /* 对于 Chrome 和 Safari */
+      -moz-osx-font-smoothing: grayscale;  /* 对于 Firefox */
     }
 
     .title.small {
