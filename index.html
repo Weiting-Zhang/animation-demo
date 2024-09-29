@@ -63,14 +63,14 @@
     tr,
     th,
     td,
-    blockquote  {
-      margin: initial;
+    blockquote {
+      /* margin: initial; */
     }
 
     :root {
       --animation-time: 0.3s;
       --AC_ThemeFore1: #1358A9;
-      --AC_ThemeFore2: rgb(177, 28, 73);
+      --AC_ThemeFore2: rgb(30, 28, 177);
       --AC_ThemeBack1: #F6F9FC;
       --AC_ThemeBack2: #EDF2F9;
       --AC_ThemeBack3: #E2EBF4;
@@ -78,7 +78,8 @@
 
     h2 {
       /* margin: 1px; */
-      will-change: font-size; /* 提示浏览器进行优化 */
+      will-change: font-size;
+      /* 提示浏览器进行优化 */
     }
 
     .title {
@@ -87,7 +88,11 @@
       font-size: 24px;
       line-height: 28px;
       color: var(--AC_ThemeFore2);
-      transition: font-size var(--animation-time) ease-in-out;;
+      transition: font-size var(--animation-time) ease-in-out;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      -webkit-transform-style: preserve-3d;
+      transform-style: preserve-3d;
     }
 
     .title.small {
